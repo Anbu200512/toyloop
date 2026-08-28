@@ -104,7 +104,7 @@ function renderAdminHeader(title = 'Overview', subtitle = 'Store operations at a
   header.innerHTML = `
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-4">
-        <button id="adm-menu-toggle" class="lg:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors">
+        <button id="adm-menu-toggle" class="sm:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors">
           <i data-lucide="menu" class="w-6 h-6 text-gray-700"></i>
         </button>
         <div class="min-w-0">
@@ -720,7 +720,7 @@ function initAdmDashboard() {
       if (!btn) return;
       const tab = ADM_TABS.find(t => t.id === btn.dataset.admTab);
       if (tab) renderAdminSection(tab.id, tab.label);
-      if (window.innerWidth < 1024) {
+      if (window.innerWidth < 640) {
         sidebar.classList.add('-translate-x-full');
         document.getElementById('adm-sidebar-overlay')?.classList.add('hidden');
       }

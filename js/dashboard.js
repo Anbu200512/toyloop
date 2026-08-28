@@ -79,7 +79,7 @@ function renderDashboardHeader() {
   header.innerHTML = `
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-4">
-        <button id="dash-menu-toggle" class="lg:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors">
+        <button id="dash-menu-toggle" class="sm:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors">
           <i data-lucide="menu" class="w-6 h-6 text-gray-700"></i>
         </button>
         <div class="min-w-0">

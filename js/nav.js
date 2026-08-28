@@ -104,30 +104,35 @@ function renderNavbar() {
         </button>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 top-0 z-50">
-      <div class="sidebar-overlay" id="mobile-menu-overlay"></div>
-      <div class="sidebar-mobile bg-white shadow-2xl p-6 pt-20 overflow-y-auto">
-        <button id="mobile-menu-close" class="absolute top-5 right-5 p-2 rounded-xl hover:bg-gray-100">
-          <i data-lucide="x" class="w-6 h-6 text-gray-700"></i>
-        </button>
-        <div class="flex flex-col gap-1">
-          ${mobileLinksHTML}
-          <hr class="my-3 border-gray-100">
-          <div class="flex items-center gap-2 px-4 py-2">
-            <button id="mobile-theme-toggle" class="p-2.5 rounded-xl hover:bg-gray-100 transition-colors" aria-label="Toggle dark mode">
-              <span data-theme-icon></span>
-            </button>
-            <button id="mobile-dir-toggle" class="p-2.5 rounded-xl hover:bg-gray-100 transition-colors" aria-label="Toggle text direction">
-              <i data-lucide="text" class="w-5 h-5 text-gray-600"></i>
-            </button>
-          </div>
-          ${authLinksMobile}
+  `;
+
+  const mobileMenu = document.createElement('div');
+  mobileMenu.id = 'mobile-menu';
+  mobileMenu.className = 'hidden lg:hidden fixed inset-0 top-0 z-50';
+  mobileMenu.innerHTML = `
+    <div class="sidebar-overlay" id="mobile-menu-overlay"></div>
+    <div class="sidebar-mobile bg-white shadow-2xl p-6 pt-20 overflow-y-auto">
+      <button id="mobile-menu-close" class="absolute top-5 right-5 p-2 rounded-xl hover:bg-gray-100">
+        <i data-lucide="x" class="w-6 h-6 text-gray-700"></i>
+      </button>
+      <div class="flex flex-col gap-1">
+        ${mobileLinksHTML}
+        <hr class="my-3 border-gray-100">
+        <div class="flex items-center gap-2 px-4 py-2">
+          <button id="mobile-theme-toggle" class="p-2.5 rounded-xl hover:bg-gray-100 transition-colors" aria-label="Toggle dark mode">
+            <span data-theme-icon></span>
+          </button>
+          <button id="mobile-dir-toggle" class="p-2.5 rounded-xl hover:bg-gray-100 transition-colors" aria-label="Toggle text direction">
+            <i data-lucide="text" class="w-5 h-5 text-gray-600"></i>
+          </button>
         </div>
+        ${authLinksMobile}
       </div>
     </div>
   `;
 
   document.body.prepend(navbar);
+  document.body.appendChild(mobileMenu);
 
   // Scroll effect
   window.addEventListener('scroll', () => {
@@ -136,7 +141,6 @@ function renderNavbar() {
 
   // Mobile menu
   const menuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
   const menuClose = document.getElementById('mobile-menu-close');
   const menuOverlay = document.getElementById('mobile-menu-overlay');
 
@@ -189,7 +193,7 @@ function renderNavbar() {
   if (isRTL) applyDir(true);
 
   TL.renderThemeIcons();
-  if (typeof lucide !== 'undefined') lucide.createIcons({ nodes: [navbar] });
+  if (typeof lucide !== 'undefined') lucide.createIcons({ nodes: [navbar, mobileMenu] });
 }
 
 document.addEventListener('DOMContentLoaded', renderNavbar);
