@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToyLoop — Play More. Waste Less.</title>
+  <meta name="description" content="ToyLoop is a kids toy rental and activity kit subscription service. Save money, reduce waste, and give your child access to new toys every month.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',300:'#86efac',400:'#4ade80',500:'#22c55e',600:'#16a34a',700:'#15803d',800:'#166534',900:'#14532d' },
+            sky: { 300:'#7dd3fc',400:'#38bdf8',500:'#0ea5e9',600:'#0284c7' },
+            amber: { 300:'#fcd34d',400:'#fbbf24',500:'#f59e0b',600:'#d97706' }
+          }
+        }
+      }
+    }
+  </script>
+  <script>if(localStorage.getItem('toyloop_theme')==='dark'){document.documentElement.classList.add('dark')}</script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+  <!-- RUNNING TICKER - under navbar -->
+  <div class="mt-16 bg-green-500 py-2.5 overflow-hidden">
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <span class="ticker-item"><i data-lucide="baby" class="w-4 h-4 inline"></i> Tiny hands. Big dreams.</span>
+        <span class="ticker-item"><i data-lucide="repeat" class="w-4 h-4 inline"></i> 1,20,000+ toys in rotation</span>
+        <span class="ticker-item"><i data-lucide="smile" class="w-4 h-4 inline"></i> No clutter. Just joy.</span>
+        <span class="ticker-item"><i data-lucide="shield-check" class="w-4 h-4 inline"></i> Safe, certified play</span>
+        <span class="ticker-item"><i data-lucide="refresh-cw" class="w-4 h-4 inline"></i> Swap when they grow</span>
+        <span class="ticker-item"><i data-lucide="gift" class="w-4 h-4 inline"></i> Every delivery feels like a birthday</span>
+        <span class="ticker-item"><i data-lucide="hand-heart" class="w-4 h-4 inline"></i> Kind to kids & planet</span>
+        <span class="ticker-item"><i data-lucide="baby" class="w-4 h-4 inline"></i> Tiny hands. Big dreams.</span>
+        <span class="ticker-item"><i data-lucide="repeat" class="w-4 h-4 inline"></i> 1,20,000+ toys in rotation</span>
+        <span class="ticker-item"><i data-lucide="smile" class="w-4 h-4 inline"></i> No clutter. Just joy.</span>
+        <span class="ticker-item"><i data-lucide="shield-check" class="w-4 h-4 inline"></i> Safe, certified play</span>
+        <span class="ticker-item"><i data-lucide="refresh-cw" class="w-4 h-4 inline"></i> Swap when they grow</span>
+        <span class="ticker-item"><i data-lucide="gift" class="w-4 h-4 inline"></i> Every delivery feels like a birthday</span>
+        <span class="ticker-item"><i data-lucide="hand-heart" class="w-4 h-4 inline"></i> Kind to kids & planet</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO - centered showcase -->
+  <section class="relative min-h-[calc(100vh-7rem)] flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900 pt-10">
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1920&q=80');"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16 lg:py-24">
+      <span class="inline-flex items-center gap-2 bg-black/40 backdrop-blur-sm text-green-300 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full mb-6">
+        <i data-lucide="sparkles" class="w-4 h-4"></i> The toy subscription parents love
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+        A world of toys, <br class="hidden sm:block"><span class="text-green-400">none to keep</span>
+      </h1>
+      <p class="text-gray-100 text-lg lg:text-xl max-w-2xl mx-auto mb-8">Swap, play, grow. Curated toy boxes delivered to your door and swapped as your little one's interests change.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-14">
+        <a href="plans.html" class="bg-green-500 hover:bg-green-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:shadow-green-500/30">
+          Start Your Box <i data-lucide="arrow-right" class="w-5 h-5 inline ml-1"></i>
+        </a>
+        <a href="catalog.html" class="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 rounded-full font-bold text-lg transition-all backdrop-blur-sm">
+          Browse the Catalog
+        </a>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-2xl mx-auto">
+        <div><p class="text-3xl font-extrabold text-white">1.2L+</p><p class="text-gray-300 text-sm mt-1">boxes delivered</p></div>
+        <div class="hidden sm:block"><p class="text-3xl font-extrabold text-white">50K+</p><p class="text-gray-300 text-sm mt-1">toys in rotation</p></div>
+        <div><p class="text-3xl font-extrabold text-white">500+</p><p class="text-gray-300 text-sm mt-1">brands available</p></div>
+        <div class="hidden sm:block"><p class="text-3xl font-extrabold text-white">4.9★</p><p class="text-gray-300 text-sm mt-1">parent rating</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 text-white py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="flex items-center gap-3 justify-center">
+        <div class="w-10 h-10 bg-white/15 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
+        <div><p class="font-bold text-sm">CE-Certified Toys</p><p class="text-green-100 text-xs">safety first, always</p></div>
+      </div>
+      <div class="flex items-center gap-3 justify-center">
+        <div class="w-10 h-10 bg-white/15 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="truck" class="w-5 h-5"></i></div>
+        <div><p class="font-bold text-sm">Free Delivery</p><p class="text-green-100 text-xs">and doorstep pickup</p></div>
+      </div>
+      <div class="flex items-center gap-3 justify-center">
+        <div class="w-10 h-10 bg-white/15 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="repeat" class="w-5 h-5"></i></div>
+        <div><p class="font-bold text-sm">Endless Rotation</p><p class="text-green-100 text-xs">swap toys any month</p></div>
+      </div>
+      <div class="flex items-center gap-3 justify-center">
+        <div class="w-10 h-10 bg-white/15 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="clapperboard" class="w-5 h-5"></i></div>
+        <div><p class="font-bold text-sm">Play Guarantee</p><p class="text-green-100 text-xs">love it or swap it free</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS - 3 steps -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 lg:mb-16 reveal">
+        <span class="inline-block bg-green-50 text-green-600 text-xs font-bold uppercase tracking-wider rounded-full px-4 py-1.5 mb-4">Effortless</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Ready in three steps</h2>
+        <p class="text-gray-600 max-w-xl mx-auto mt-4">No browsing galleries for hours. We do the choosing, you do the playing.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 stagger-children">
+        <div class="relative text-center">
+          <div class="relative inline-block mb-6">
+            <div class="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mx-auto shadow-lg shadow-green-200">
+              <i data-lucide="user-plus" class="w-8 h-8 text-white"></i>
+            </div>
+            <span class="absolute -top-2 -right-2 w-7 h-7 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
+          </div>
+          <h3 class="font-bold text-lg text-gray-800 mb-2">Tell us about your child</h3>
+          <p class="text-gray-600 text-sm max-w-xs mx-auto">Age, interests and milestones — our experts build a match profile instantly.</p>
+        </div>
+        <div class="relative text-center">
+          <i data-lucide="arrow-right" class="hidden md:block absolute -left-8 top-8 w-6 h-6 text-gray-300"></i>
+          <div class="relative inline-block mb-6">
+            <div class="w-16 h-16 bg-sky-500 rounded-2xl flex items-center justify-center mx-auto shadow-lg shadow-sky-200">
+              <i data-lucide="package" class="w-8 h-8 text-white"></i>
+            </div>
+            <span class="absolute -top-2 -right-2 w-7 h-7 bg-sky-600 text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
+          </div>
+          <h3 class="font-bold text-lg text-gray-800 mb-2">Your box arrives</h3>
+          <p class="text-gray-600 text-sm max-w-xs mx-auto">Four hand-picked, freshly sanitized toys land at your door, ready to play.</p>
+        </div>
+        <div class="relative text-center">
+          <i data-lucide="arrow-right" class="hidden md:block absolute -left-8 top-8 w-6 h-6 text-gray-300"></i>
+          <div class="relative inline-block mb-6">
+            <div class="w-16 h-16 bg-amber-500 rounded-2xl flex items-center justify-center mx-auto shadow-lg shadow-amber-200">
+              <i data-lucide="rotate-ccw" class="w-8 h-8 text-white"></i>
+            </div>
+            <span class="absolute -top-2 -right-2 w-7 h-7 bg-amber-500 text-white rounded-full flex items-center justify-center text-xs font-bold">3</span>
+          </div>
+          <h3 class="font-bold text-lg text-gray-800 mb-2">Play. Grow. Swap.</h3>
+          <p class="text-gray-600 text-sm max-w-xs mx-auto">Keep them as long as they're loved, then swap for the next exciting set.</p>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="plans.html" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold transition-all hover:shadow-xl hover:shadow-green-200">
+          Pick a Plan <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY FAMILIES LOVE - alternating feature rows -->
+  <section class="py-20 lg:py-28 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 lg:mb-16 reveal">
+        <span class="inline-block bg-green-50 text-green-600 text-xs font-bold uppercase tracking-wider rounded-full px-4 py-1.5 mb-4">Why ToyLoop</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Families stay for the play</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-4">Less screen time, more wonder — and a home that stays clutter-free.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16 lg:mb-20">
+        <div class="relative reveal">
+          <div class="absolute -top-8 -right-8 w-56 h-56 bg-amber-200/40 dark:bg-amber-500/10 rounded-full blur-3xl"></div>
+          <img src="assets/images/Creative%20kits%20built%20for%20real%2C%20hands-on%20learning.jpg" alt="Art and craft activity kit" class="relative w-full h-[320px] lg:h-[400px] object-cover rounded-3xl shadow-2xl">
+          <div class="absolute -bottom-6 left-6 bg-white rounded-2xl px-6 py-4 shadow-xl flex items-center gap-3 animate-float">
+            <div class="w-11 h-11 bg-amber-50 rounded-full flex items-center justify-center flex-shrink-0"><i data-lucide="palette" class="w-5 h-5 text-amber-500"></i></div>
+            <div><p class="font-bold text-gray-800 text-lg leading-none">2.5 hrs</p><p class="text-xs text-gray-500 mt-0.5">screen-free play a day</p></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <span class="inline-block bg-amber-50 text-amber-500 text-xs font-bold uppercase tracking-wider rounded-full px-4 py-1.5 mb-4">Screen-Free Fun</span>
+          <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">Creative kits built for real, hands-on learning</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">From art studios to science labs, each box brings projects that spark curiosity and keep little hands busy.</p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3"><div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-3.5 h-3.5 text-green-600"></i></div><p class="text-gray-700 text-sm font-medium">Mess-free craft kits with easy clean-up</p></li>
+            <li class="flex items-center gap-3"><div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-3.5 h-3.5 text-green-600"></i></div><p class="text-gray-700 text-sm font-medium">New projects every single month</p></li>
+            <li class="flex items-center gap-3"><div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-3.5 h-3.5 text-green-600"></i></div><p class="text-gray-700 text-sm font-medium">Skill cards that grow with age groups</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="order-2 lg:order-1 reveal">
+          <span class="inline-block bg-green-50 text-green-600 text-xs font-bold uppercase tracking-wider rounded-full px-4 py-1.5 mb-4">Outdoor Ready</span>
+          <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">Season-perfect rotations for every weather</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">Sunny Saturdays get cricket sets. Rainy evenings get board games. Our experts rotate your box to match the season and your child's mood.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3"><div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-3.5 h-3.5 text-green-600"></i></div><p class="text-gray-700 text-sm font-medium">Weather-aware toy selection</p></li>
+            <li class="flex items-center gap-3"><div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-3.5 h-3.5 text-green-600"></i></div><p class="text-gray-700 text-sm font-medium">Travel and vacation add-on boxes</p></li>
+            <li class="flex items-center gap-3"><div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-3.5 h-3.5 text-green-600"></i></div><p class="text-gray-700 text-sm font-medium">Indoor energy-burners on demand</p></li>
+          </ul>
+          <a href="catalog.html" class="inline-flex items-center gap-2 text-green-600 font-semibold hover:text-green-700 transition-colors">
+            Browse the rotation <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+        <div class="order-1 lg:order-2 relative reveal">
+          <div class="absolute -bottom-8 -left-8 w-56 h-56 bg-green-200/40 dark:bg-green-500/10 rounded-full blur-3xl"></div>
+          <img src="assets/images/Season-perfect%20rotations%20for%20every%20weather.jpg" alt="Outdoor sports set" class="relative w-full h-[320px] lg:h-[400px] object-cover rounded-3xl shadow-2xl">
+          <div class="absolute -bottom-6 right-6 bg-white rounded-2xl px-6 py-4 shadow-xl flex items-center gap-3 animate-float">
+            <div class="w-11 h-11 bg-green-50 rounded-full flex items-center justify-center flex-shrink-0"><i data-lucide="sun" class="w-5 h-5 text-green-600"></i></div>
+            <div><p class="font-bold text-gray-800 text-lg leading-none">60% more</p><p class="text-xs text-gray-500 mt-0.5">active outdoor time</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURATED HIGHLIGHT - wide image banner -->
+  <section class="py-20 lg:py-28 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl reveal">
+        <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=1600&h=700&fit=crop" alt="Child playing with wooden toys" class="w-full h-[420px] lg:h-[520px] object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-8 lg:p-14 text-center">
+          <span class="inline-flex items-center gap-2 bg-green-500 text-white text-xs sm:text-sm font-bold uppercase tracking-wider px-4 py-2 rounded-full mb-4">
+            <i data-lucide="wand-2" class="w-4 h-4"></i> Curated by experts
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Matched to every milestone</h2>
+          <p class="text-gray-200 max-w-xl mx-auto mb-8">Wooden puzzles for tiny hands. Building sets for little engineers. Books that grow with your reader. We match the toy to the moment.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="bg-white/15 backdrop-blur-sm border border-white/20 text-white text-sm font-semibold px-5 py-2.5 rounded-full">0-1 years</span>
+            <span class="bg-white/15 backdrop-blur-sm border border-white/20 text-white text-sm font-semibold px-5 py-2.5 rounded-full">2-3 years</span>
+            <span class="bg-white/15 backdrop-blur-sm border border-white/20 text-white text-sm font-semibold px-5 py-2.5 rounded-full">4-5 years</span>
+            <span class="bg-white/15 backdrop-blur-sm border border-white/20 text-white text-sm font-semibold px-5 py-2.5 rounded-full">6+ years</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED TOYS -->
+  <section class="py-20 lg:py-28 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 lg:mb-16 reveal">
+        <span class="inline-block bg-green-50 text-green-600 text-xs font-bold uppercase tracking-wider rounded-full px-4 py-1.5 mb-4">Rent & Play</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">This month's fan favourites</h2>
+        <p class="text-gray-600 max-w-xl mx-auto mt-4">Straight from the rotation — rent these before someone else does.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 stagger-children" id="featured-toys"></div>
+      <div class="text-center mt-12">
+        <a href="catalog.html" class="inline-flex items-center gap-2 border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white px-8 py-3.5 rounded-full font-bold transition-all">
+          Browse All Toys <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS STRIP -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-green-600 via-emerald-600 to-green-700 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-60 h-60 bg-white rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center mb-14 reveal">
+        <span class="inline-block bg-white/15 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-semibold">Plans for every home</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-4 mb-3">Pick your pace of play</h2>
+        <p class="text-green-100 max-w-xl mx-auto">Start small, scale up. Cancel whenever — no strings attached.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 stagger-children">
+        <div class="bg-white rounded-3xl p-8 text-gray-800 shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all">
+          <h3 class="font-bold text-lg">Discoverer</h3>
+          <p class="text-sm text-gray-500 mb-4">For playful toddlers</p>
+          <p class="text-4xl font-extrabold mb-1">₹999<span class="text-sm font-semibold text-gray-400">/month</span></p>
+          <ul class="text-sm space-y-2.5 my-6">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>2 toys per box</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>Monthly swap</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>Standard support</li>
+          </ul>
+          <a href="plans.html" class="block text-center border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white py-2.5 rounded-full font-bold text-sm transition-all">Choose</a>
+        </div>
+        <div class="bg-white rounded-3xl p-8 text-gray-800 shadow-xl ring-4 ring-white/40 hover:-translate-y-1 hover:shadow-2xl transition-all relative">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-white text-xs font-bold px-4 py-1 rounded-full">MOST LOVED</span>
+          <h3 class="font-bold text-lg">Explorer</h3>
+          <p class="text-sm text-gray-500 mb-4">Our most popular box</p>
+          <p class="text-4xl font-extrabold mb-1">₹1,499<span class="text-sm font-semibold text-gray-400">/month</span></p>
+          <ul class="text-sm space-y-2.5 my-6">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>4 toys per box</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>Swap anytime</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>Priority support</li>
+          </ul>
+          <a href="plans.html" class="block text-center bg-green-500 hover:bg-green-600 text-white py-2.5 rounded-full font-bold text-sm transition-all hover:shadow-lg hover:shadow-green-200">Choose</a>
+        </div>
+        <div class="bg-white rounded-3xl p-8 text-gray-800 shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all">
+          <h3 class="font-bold text-lg">Pathfinder</h3>
+          <p class="text-sm text-gray-500 mb-4">Great for big families</p>
+          <p class="text-4xl font-extrabold mb-1">₹2,499<span class="text-sm font-semibold text-gray-400">/month</span></p>
+          <ul class="text-sm space-y-2.5 my-6">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>6 toys + 1 kit</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>Bi-weekly swap</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>Dedicated expert</li>
+          </ul>
+          <a href="plans.html" class="block text-center border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white py-2.5 rounded-full font-bold text-sm transition-all">Choose</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 lg:mb-16 reveal">
+        <span class="inline-block bg-green-50 text-green-600 text-xs font-bold uppercase tracking-wider rounded-full px-4 py-1.5 mb-4">Parent Stories</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Loved by busy parents</h2>
+        <p class="text-gray-600 max-w-xl mx-auto mt-4">From first box to hundredth swap — what families really think.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 stagger-children">
+        <figure class="bg-gray-50 rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+          <div class="flex items-center gap-1 mb-4">
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+          </div>
+          <blockquote>
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">"My daughter is obsessed with the kitchen set she got this month. I stopped buying toys entirely — the swap makes it feel brand new every time."</p>
+          </blockquote>
+          <figcaption class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center"><span class="text-green-700 font-bold text-sm">A</span></div>
+            <div><p class="font-semibold text-gray-800 text-sm">Ananya R.</p><p class="text-xs text-gray-500">Mom of a 3-year-old</p></div>
+          </figcaption>
+        </figure>
+        <figure class="bg-gray-50 rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+          <div class="flex items-center gap-1 mb-4">
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+          </div>
+          <blockquote>
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">"Two kids, two age groups, zero toy clutter. The Pathfinder plan is a lifesaver and the bi-weekly swaps keep both of them excited."</p>
+          </blockquote>
+          <figcaption class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center"><span class="text-purple-600 font-bold text-sm">R</span></div>
+            <div><p class="font-semibold text-gray-800 text-sm">Rohan & Meera</p><p class="text-xs text-gray-500">Parents of two</p></div>
+          </figcaption>
+        </figure>
+        <figure class="bg-gray-50 rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+          <div class="flex items-center gap-1 mb-4">
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+            <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+          </div>
+          <blockquote>
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">"The science kits are incredible and everything arrives spotless and sealed. It's the only subscription I've never thought of cancelling."</p>
+          </blockquote>
+          <figcaption class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center"><span class="text-amber-600 font-bold text-sm">K</span></div>
+            <div><p class="font-semibold text-gray-800 text-sm">Kavya S.</p><p class="text-xs text-gray-500">Fan of activity kits</p></div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="py-20 lg:py-28 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      <div class="bg-gradient-to-br from-green-600 to-emerald-700 rounded-[2.5rem] px-6 py-16 lg:p-20 text-center text-white relative overflow-hidden shadow-2xl">
+        <div class="absolute -top-16 -left-16 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-16 -right-16 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="relative">
+          <span class="inline-block bg-white/15 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-semibold mb-6">Join 10,000+ families</span>
+          <h2 class="text-3xl sm:text-5xl font-bold mb-4">The next box has their name on it</h2>
+          <p class="text-green-100 text-lg mb-3 max-w-lg mx-auto">Tiny hands. Big dreams. And a box of fresh joys every single month.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <a href="signup.html" class="bg-white text-green-700 hover:bg-green-50 px-10 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl">Create Free Account</a>
+            <a href="plans.html" class="border-2 border-white/50 text-white hover:bg-white/10 px-10 py-4 rounded-full font-bold text-lg transition-all">Explore Plans</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" class="back-to-top bg-green-500 hover:bg-green-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all hover:shadow-xl" aria-label="Back to top">
+    <i data-lucide="chevron-up" class="w-6 h-6"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('featured-toys');
+      if (!container) return;
+      const featuredImages = [
+        'assets/images/t1.jpg',
+        'assets/images/t2.jpg',
+        'assets/images/t3.jpg',
+        'assets/images/t4.jpg'
+      ];
+      container.innerHTML = featuredImages.map(src => `
+        <div class="relative overflow-hidden rounded-3xl shadow-sm group aspect-[4/5]">
+          <img src="${src}" alt="Featured toy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        </div>
+      `).join('');
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

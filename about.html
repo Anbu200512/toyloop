@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — ToyLoop</title>
+  <meta name="description" content="Learn about ToyLoop — how we started, why we exist, and the mission behind Play More. Waste Less.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',300:'#86efac',400:'#4ade80',500:'#22c55e',600:'#16a34a',700:'#15803d',800:'#166534',900:'#14532d' },
+            sky: { 300:'#7dd3fc',400:'#38bdf8',500:'#0ea5e9',600:'#0284c7' },
+            amber: { 300:'#fcd34d',400:'#fbbf24',500:'#f59e0b',600:'#d97706' }
+          }
+        }
+      }
+    }
+  </script>
+  <script>if(localStorage.getItem('toyloop_theme')==='dark'){document.documentElement.classList.add('dark')}</script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+  <!-- HERO -->
+  <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900 pt-28 pb-16">
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/about-hero.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-black/40 backdrop-blur-sm text-green-300 text-xs font-bold uppercase tracking-wider rounded-full px-4 py-1.5 mb-5">Our Story</span>
+      <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4 animate-fade-in-up">About ToyLoop</h1>
+      <p class="text-lg text-gray-100 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay:0.1s">Play More. Waste Less. We're on a mission to give every child a world of toys — without the clutter, the cost, or the landfill.</p>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <section class="bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 text-white py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <div><p class="text-4xl font-extrabold">1.2L+</p><p class="text-green-100 text-sm mt-1">boxes delivered</p></div>
+      <div><p class="text-4xl font-extrabold">50K+</p><p class="text-green-100 text-sm mt-1">toys sanitized & reused</p></div>
+      <div><p class="text-4xl font-extrabold">10K+</p><p class="text-green-100 text-sm mt-1">happy families</p></div>
+      <div><p class="text-4xl font-extrabold">4.9★</p><p class="text-green-100 text-sm mt-1">average parent rating</p></div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="relative reveal">
+          <div class="absolute -top-8 -left-8 w-56 h-56 bg-green-200/40 dark:bg-green-500/10 rounded-full blur-3xl"></div>
+          <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-sky-200/40 dark:bg-sky-500/10 rounded-full blur-3xl"></div>
+          <img src="https://images.unsplash.com/photo-1704708798584-e63237feaff1?w=800&h=900&fit=crop" alt="Two children playing with toys" class="relative w-full h-[420px] lg:h-[520px] object-cover rounded-3xl shadow-2xl">
+          <div class="absolute -bottom-6 right-6 bg-white rounded-2xl px-6 py-4 shadow-xl flex items-center gap-3 animate-float">
+            <div class="w-11 h-11 bg-green-50 rounded-full flex items-center justify-center flex-shrink-0"><i data-lucide="baby" class="w-5 h-5 text-green-600"></i></div>
+            <div><p class="font-bold text-gray-800 text-lg leading-none">Since 2019</p><p class="text-xs text-gray-500 mt-0.5">500+ brands curated</p></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <span class="inline-block bg-green-50 text-green-600 text-xs font-bold uppercase tracking-wider rounded-full px-4 py-1.5 mb-4">Why We Exist</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">From one cluttered playroom to a smarter way to play</h2>
+          <p class="text-gray-600 leading-relaxed mb-4">ToyLoop began in 2019 with a simple frustration: our homes were overflowing with toys our kids had already outgrown. The average toy is played with for just a few weeks before it's forgotten.</p>
+          <p class="text-gray-600 leading-relaxed mb-6">We asked a better question — what if toys could be shared? What if every child could access a constantly refreshed library of premium, perfectly sanitized toys for a fraction of the price?</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0"><i data-lucide="check" class="w-3.5 h-3.5 text-green-600"></i></div>
+              <div><p class="font-semibold text-gray-800 text-sm">A toy library, reimagined</p><p class="text-gray-600 text-sm">Premium toys without the price tag or the waste.</p></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0"><i data-lucide="check" class="w-3.5 h-3.5 text-green-600"></i></div>
+              <div><p class="font-semibold text-gray-800 text-sm">Built by parents</p><p class="text-gray-600 text-sm">Every decision is shaped by real family routines.</p></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0"><i data-lucide="check" class="w-3.5 h-3.5 text-green-600"></i></div>
+              <div><p class="font-semibold text-gray-800 text-sm">Kind to the planet</p><p class="text-gray-600 text-sm">Toys keep circulating instead of filling landfills.</p></div>
+            </li>
+          </ul>
+          <a href="catalog.html" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold transition-all hover:shadow-xl hover:shadow-green-200">
+            Explore the Catalog <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VALUES -->
+  <section class="py-20 lg:py-28 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 lg:mb-16 reveal">
+        <span class="inline-block bg-green-50 text-green-600 text-xs font-bold uppercase tracking-wider rounded-full px-4 py-1.5 mb-4">What We Stand For</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Three promises behind every box</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-4">Everything we build is rooted in these simple values.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 stagger-children">
+        <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 hover:shadow-xl hover:-translate-y-1 transition-all group">
+          <div class="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform"><i data-lucide="sparkles" class="w-7 h-7 text-green-600"></i></div>
+          <h3 class="font-bold text-lg text-gray-800 mb-2">Play Without Limits</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Every child deserves variety. A toy for every curiosity, for every stage — never outgrown, always exciting.</p>
+        </div>
+        <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 hover:shadow-xl hover:-translate-y-1 transition-all group">
+          <div class="w-14 h-14 bg-sky-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform"><i data-lucide="leaf" class="w-7 h-7 text-sky-500"></i></div>
+          <h3 class="font-bold text-lg text-gray-800 mb-2">Waste Less</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Sharing instead of buying. Ten families can enjoy the same toy — that's ten times less waste.</p>
+        </div>
+        <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 hover:shadow-xl hover:-translate-y-1 transition-all group">
+          <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform"><i data-lucide="heart-handshake" class="w-7 h-7 text-amber-500"></i></div>
+          <h3 class="font-bold text-lg text-gray-800 mb-2">Parents First</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Safe, sanitized, and hassle-free. We sweat the small stuff so parents can enjoy the big moments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR JOURNEY / TIMELINE -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 lg:mb-16 reveal">
+        <span class="inline-block bg-green-50 text-green-600 text-xs font-bold uppercase tracking-wider rounded-full px-4 py-1.5 mb-4">Milestones</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Our journey so far</h2>
+        <p class="text-gray-600 max-w-xl mx-auto mt-4">A few highlights from building a toy library families love.</p>
+      </div>
+      <div class="relative max-w-5xl mx-auto">
+        <div class="absolute left-5 lg:left-1/2 top-2 bottom-2 w-px -translate-x-1/2 bg-green-200 dark:bg-green-500/20"></div>
+        <div class="space-y-12 lg:space-y-16 stagger-children">
+
+          <div class="relative lg:grid lg:grid-cols-2 lg:gap-16">
+            <span class="absolute left-5 lg:left-1/2 top-6 w-4 h-4 rounded-full bg-green-500 ring-4 ring-white dark:ring-gray-900 -translate-x-1/2 z-10"></span>
+            <div class="hidden lg:block lg:text-right">
+              <span class="inline-block bg-green-100 text-green-700 text-xs font-bold rounded-full px-3 py-1">2019</span>
+              <h3 class="text-xl font-bold text-gray-800 mt-2">The idea is born</h3>
+              <p class="text-gray-600 text-sm mt-1">A cluttered playroom and one too many forgotten toys spark the concept.</p>
+            </div>
+            <div class="pl-14 lg:pl-0">
+              <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="lightbulb" class="w-5 h-5 text-green-600"></i></div>
+                  <span class="lg:hidden inline-block bg-green-100 text-green-700 text-xs font-bold rounded-full px-3 py-1">2019</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1 lg:hidden">The idea is born</h3>
+                <p class="text-gray-600 text-sm lg:hidden">A cluttered playroom and one too many forgotten toys spark the concept.</p>
+                <p class="hidden lg:block text-gray-500 text-sm">From a single shelf of hand-me-down toys to a full catalog — this is where it all started.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative lg:grid lg:grid-cols-2 lg:gap-16">
+            <span class="absolute left-5 lg:left-1/2 top-6 w-4 h-4 rounded-full bg-sky-500 ring-4 ring-white dark:ring-gray-900 -translate-x-1/2 z-10"></span>
+            <div class="hidden lg:block lg:text-right"></div>
+            <div class="pl-14 lg:pl-0 lg:order-first">
+              <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-10 h-10 bg-sky-100 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="package" class="w-5 h-5 text-sky-600"></i></div>
+                  <span class="lg:hidden inline-block bg-sky-100 text-sky-700 text-xs font-bold rounded-full px-3 py-1">2021</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1 lg:hidden">First boxes roll out</h3>
+                <p class="text-gray-600 text-sm lg:hidden">Our first 500 boxes ship and families fall in love with the swap.</p>
+                <p class="hidden lg:block text-gray-500 text-sm">Our first 500 boxes hit doorsteps across the city — and families fell in love with the swap.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative lg:grid lg:grid-cols-2 lg:gap-16">
+            <span class="absolute left-5 lg:left-1/2 top-6 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-white dark:ring-gray-900 -translate-x-1/2 z-10"></span>
+            <div class="hidden lg:block lg:text-right">
+              <span class="inline-block bg-amber-100 text-amber-700 text-xs font-bold rounded-full px-3 py-1">2023</span>
+              <h3 class="text-xl font-bold text-gray-800 mt-2">10,000 families</h3>
+              <p class="text-gray-600 text-sm mt-1">Our community hits 10,000 families and our lab goes medical-grade.</p>
+            </div>
+            <div class="pl-14 lg:pl-0">
+              <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="users" class="w-5 h-5 text-amber-600"></i></div>
+                  <span class="lg:hidden inline-block bg-amber-100 text-amber-700 text-xs font-bold rounded-full px-3 py-1">2023</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1 lg:hidden">10,000 families</h3>
+                <p class="text-gray-600 text-sm lg:hidden">Our community hits 10,000 families and our lab goes medical-grade.</p>
+                <p class="hidden lg:block text-gray-500 text-sm">10,000 happy families. Newer sanitation lab. Same promise of safe, spotless play.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative lg:grid lg:grid-cols-2 lg:gap-16">
+            <span class="absolute left-5 lg:left-1/2 top-6 w-4 h-4 rounded-full bg-purple-500 ring-4 ring-white dark:ring-gray-900 -translate-x-1/2 z-10"></span>
+            <div class="hidden lg:block lg:text-right"></div>
+            <div class="pl-14 lg:pl-0 lg:order-first">
+              <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="trending-up" class="w-5 h-5 text-purple-600"></i></div>
+                  <span class="lg:hidden inline-block bg-purple-100 text-purple-700 text-xs font-bold rounded-full px-3 py-1">2026</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1 lg:hidden">1.2 lakh boxes delivered</h3>
+                <p class="text-gray-600 text-sm lg:hidden">Over 1.2 lakh boxes delivered — and this is only the beginning.</p>
+                <p class="hidden lg:block text-gray-500 text-sm">Over 1.2 lakh boxes delivered so far — and honestly, this is only the beginning.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 lg:py-24 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Be part of the story</h2>
+      <p class="text-gray-600 mb-8">Join thousands of families playing smarter — and a little kinder to the planet.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="signup.html" class="bg-green-500 hover:bg-green-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:shadow-green-200">Get Started Free</a>
+        <a href="contact.html" class="bg-white dark:bg-white/10 dark:border-white/20 hover:bg-gray-50 dark:hover:bg-white/15 text-gray-800 dark:text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-md hover:shadow-lg border border-gray-200">Talk to Us</a>
+      </div>
+    </div>
+  </section>
+
+  <button id="back-to-top" class="back-to-top bg-green-500 hover:bg-green-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center" aria-label="Back to top"><i data-lucide="chevron-up" class="w-6 h-6"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>
