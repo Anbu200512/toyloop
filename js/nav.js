@@ -111,11 +111,19 @@ function renderNavbar() {
   mobileMenu.className = 'hidden lg:hidden fixed inset-0 top-0 z-50';
   mobileMenu.innerHTML = `
     <div class="sidebar-overlay" id="mobile-menu-overlay"></div>
-    <div class="sidebar-mobile bg-white shadow-2xl p-6 pt-20 overflow-y-auto">
-      <button id="mobile-menu-close" class="absolute top-5 right-5 p-2 rounded-xl hover:bg-gray-100">
-        <i data-lucide="x" class="w-6 h-6 text-gray-700"></i>
-      </button>
-      <div class="flex flex-col gap-1">
+    <div class="sidebar-mobile bg-white shadow-2xl overflow-y-auto">
+      <div class="sticky top-0 bg-white border-b border-gray-100 px-5 py-4 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2.5" aria-label="ToyLoop home">
+          <div class="w-10 h-10 bg-gradient-to-br from-green-400 via-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg shadow-green-500/20">
+            <i data-lucide="baby" class="w-5 h-5 text-white"></i>
+          </div>
+          <span class="text-xl font-extrabold text-green-600 dark:text-green-400 tracking-tight">Toy<span class="text-green-500 dark:text-green-300">Loop</span></span>
+        </a>
+        <button id="mobile-menu-close" class="p-2 rounded-xl hover:bg-gray-100" aria-label="Close menu">
+          <i data-lucide="x" class="w-6 h-6 text-gray-700"></i>
+        </button>
+      </div>
+      <div class="p-6 flex flex-col gap-1">
         ${mobileLinksHTML}
         <hr class="my-3 border-gray-100">
         <div class="flex items-center gap-2 px-4 py-2">
