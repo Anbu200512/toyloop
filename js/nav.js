@@ -64,12 +64,10 @@ function renderNavbar() {
     </div>`;
 
   const authLinks = `
-    <a href="login.html" class="border-2 border-green-500 text-green-600 hover:bg-green-50 px-5 py-2 rounded-full font-semibold text-sm transition-all">Login</a>
-    <a href="signup.html" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-all hover:shadow-lg hover:shadow-green-200">Sign Up</a>`;
+    <a href="login.html" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-all hover:shadow-lg hover:shadow-green-200">Login</a>`;
 
   const authLinksMobile = `
-    <a href="login.html" class="block py-3 px-4 rounded-xl border-2 border-green-500 text-green-600 text-center font-semibold mt-2">Login</a>
-    <a href="signup.html" class="block py-3 px-4 rounded-xl bg-green-500 text-white text-center font-semibold mt-2">Sign Up</a>`;
+    <a href="login.html" class="block py-3 px-4 rounded-xl bg-green-500 text-white text-center font-semibold mt-2">Login</a>`;
 
   const isDark = TL.get('toyloop_theme') === 'dark';
   const isRTL = TL.get('toyloop_dir') === 'rtl';
@@ -78,7 +76,7 @@ function renderNavbar() {
   navbar.className = 'fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-300';
   navbar.id = 'main-navbar';
   navbar.innerHTML = `
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
       <div class="flex items-center justify-between h-16">
         <a href="index.html" class="flex items-center gap-2.5">
           <div class="w-10 h-10 bg-gradient-to-br from-green-400 via-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg shadow-green-500/20">
@@ -86,15 +84,15 @@ function renderNavbar() {
           </div>
           <span class="text-xl font-extrabold text-green-600 dark:text-green-400 tracking-tight">Toy<span class="text-green-500 dark:text-green-300">Loop</span></span>
         </a>
-        <div class="hidden lg:flex items-center gap-6">
+        <div class="hidden lg:flex items-center gap-3 xl:gap-6">
           ${linksHTML}
         </div>
-        <div class="hidden lg:flex items-center gap-2">
+        <div class="hidden lg:flex items-center gap-1 xl:gap-2">
           <button id="theme-toggle" class="p-2.5 rounded-xl hover:bg-gray-100 transition-colors" aria-label="Toggle dark mode" title="Toggle dark/light mode">
             <span data-theme-icon></span>
           </button>
           <button id="dir-toggle" class="p-2.5 rounded-xl hover:bg-gray-100 transition-colors" aria-label="Toggle text direction" title="Toggle RTL/LTR">
-            <i data-lucide="text" class="w-5 h-5 text-gray-600"></i>
+            <i data-lucide="arrow-left-right" class="w-5 h-5 text-gray-600"></i>
           </button>
           <div class="w-px h-6 bg-gray-200 mx-1"></div>
           ${authLinks}
@@ -131,7 +129,7 @@ function renderNavbar() {
             <span data-theme-icon></span>
           </button>
           <button id="mobile-dir-toggle" class="p-2.5 rounded-xl hover:bg-gray-100 transition-colors" aria-label="Toggle text direction">
-            <i data-lucide="text" class="w-5 h-5 text-gray-600"></i>
+            <i data-lucide="arrow-left-right" class="w-5 h-5 text-gray-600"></i>
           </button>
         </div>
         ${authLinksMobile}
