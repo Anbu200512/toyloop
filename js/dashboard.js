@@ -92,7 +92,7 @@ function renderDashboardHeader() {
           <span data-theme-icon></span>
         </button>
         <button id="dash-dir-toggle" class="p-2.5 rounded-xl hover:bg-gray-100 transition-colors" aria-label="Toggle text direction" title="Toggle RTL/LTR">
-          <i data-lucide="text" class="w-5 h-5 text-gray-600"></i>
+          <i data-lucide="arrow-left-right" class="w-5 h-5 text-gray-600"></i>
         </button>
         <button onclick="showNotifications()" class="relative p-2.5 rounded-xl hover:bg-gray-100 transition-colors" title="Notifications">
           <i data-lucide="bell" class="w-5 h-5 text-gray-600"></i>
